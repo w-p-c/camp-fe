@@ -1,6 +1,9 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
+import { tailwindConfig } from '@storefront-ui/react/tailwind-config';
+import sfTypography from '@storefront-ui/typography';
 
 const config: Config = {
+  presets: [tailwindConfig],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,14 +12,12 @@ const config: Config = {
     './node_modules/@storefront-ui/react/**/*.{js,mjs}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    extend: {},
+    fontFamily: {
+      sans: ['Inter', 'system-ui'],
+      heading: ['Arial', 'Georgia'],
     },
   },
-  plugins: [],
-}
-export default config
+  plugins: [sfTypography],
+};
+export default config;

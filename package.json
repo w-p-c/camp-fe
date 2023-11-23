@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@storefront-ui/react": "^2.6.0",
+    "@storefront-ui/typography": "^2.4.0",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18"
@@ -22,6 +23,8 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "postcss": "^8.4.31",
+    "prettier": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "^3.3.5",
     "typescript": "^5"
   }
